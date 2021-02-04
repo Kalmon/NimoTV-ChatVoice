@@ -18,6 +18,16 @@ window.onload = function() {
         Start();
     }
 }
+
+carregar();
+function carregar(){
+    var script = document.createElement('script');
+    script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+    script.type = 'text/javascript';
+    document.getElementsByTagName('head')[0].appendChild(script);
+    Start();
+}
+
 async function Start(){
     if(!Speak){
         let ChatTxt = $(".nimo-room__chatroom__message-item").map(function(index){
